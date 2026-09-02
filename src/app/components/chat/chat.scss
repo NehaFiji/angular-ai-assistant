@@ -1,0 +1,60 @@
+.chat-box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fafafa;
+}
+
+.messages {
+  min-height: 200px;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+.trainee, .assistant {
+  margin: 0.5rem 0;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+}
+
+.trainee {
+  background: #e8eaf6;
+  text-align: right;
+}
+
+.assistant {
+  background: #ffffff;
+  border: 1px solid #eee;
+  text-align: left;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #a5b4fc;
+  cursor: not-allowed;
+}

@@ -1,0 +1,21 @@
+<div class="chat-box">
+  <div class="messages">
+    <div *ngFor="let message of messages" [ngClass]="message.sender">
+      <strong>{{ message.sender === 'trainee' ? 'You' : 'Assistant' }}:</strong>
+      <span>{{ message.text }}</span>
+    </div>
+  </div>
+
+  <p *ngIf="isLoading">Loading...</p>
+  <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+
+  <form (ngSubmit)="askQuestion()">
+    <input
+      type="text"
+      name="question"
+      placeholder="Type your question..."
+      [(ngModel)]="question"
+      [disabled]="isLoading" />
+    <button type="submit" [disabled]="isLoading || !question.trim()">Send</button>
+  </form>
+</div>
